@@ -1,0 +1,259 @@
+.acm {
+    margin-top: -130px;
+    width: 100%;
+    height: 700px;
+    background-image: url(../Media/wallpaper\ azul\ escuro.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.acm-conteudo {
+    width: 100%;
+    height: 450px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.acm-div1 {
+    width: 350px;
+    height: 750px;
+    padding: 40px 80px;
+    margin-bottom: 350px;
+}
+
+.acm-div2 {
+    width: 95%;
+    padding: 0px 25px;
+}
+
+.acm2-conteudo {
+    margin-top: 30px;
+    color: #ffff;
+    font-family: 'poppins';
+    font-weight: 300;
+}
+
+.acm2-conteudo ul {
+    list-style: none;
+    line-height: 20px;
+}
+
+
+.acm2-conteudo h1 {
+    margin-bottom: 20px;
+}
+
+
+.acm2-conteudo li {
+    font-size: 13px;
+}
+
+.acm2-conteudo p {
+    font-size: 12px;
+}
+
+
+#video-area {
+    flex: 1;
+    padding: 10px;
+}
+
+#video-area video {
+    width: 550px;
+    height: 700px;
+    object-fit: cover;
+    /* ajusta o vídeo para preencher mantendo proporção se possível */
+}
+
+
+.home {
+    width: 100%;
+    height: 600px;
+    padding: 30px 30px;
+    font-family: 'poppins';
+}
+
+.home1{
+    display: flex;
+    gap: 30px;
+}
+
+.home-slide {
+    position: relative; /* Essencial para posicionar os indicadores */
+    width: 100%;
+    overflow: hidden; /* Garante que só um slide seja visível */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contêiner das Imagens */
+.slides {
+    display: flex; /* O JavaScript irá controlar a visibilidade, mas é bom para estrutura */
+    transition: transform 0.5s ease-in-out;
+}
+.slidesa img{
+    width: 500px;
+    height: 600px;
+    display: block;
+    
+}
+.home-slide img {
+    width: 100%;
+    height: 350px;
+    
+}
+
+/* Classe para esconder slides (controlada pelo JS) */
+.hidden {
+    display: none !important; 
+    /* Usaremos JS para mostrar/esconder, mas esta classe é a base */
+}
+
+/* Indicadores (Bolinhas) */
+.indicators {
+    justify-content: center;
+    margin-left: -100px;
+    margin-top: -30px;
+    bottom: 10px; /* Distância da parte inferior da imagem */
+    display: flex;
+    gap: 8px; /* Espaçamento entre as bolinhas */
+    z-index: 10; /* Garante que fiquem acima da imagem */
+}
+
+.indicator-dot {
+    width: 20px;
+    height: 10px;
+    background-image: url(/Media/wallpaper\ azul\ escuro.png);  
+    border-radius: 10px; /* Transforma em bolinha */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.3); /* Contorno sutil */
+}
+
+.indicator-dot.active {
+    background-image: url(/Media/wallpaper\ azul\ claro.png);
+    transform: scale(1.1); /* Um pequeno destaque */
+}
+
+.home1-text h1{
+    margin-top: 10px;
+}
+.home1-text h2{
+    margin-top: -30px;
+    padding-right:35px;
+    font-size: 16px;
+    font-weight: 450;
+}
+
+.home1-text h3{
+    font-size: 16px;
+    padding-right:35px;
+    font-weight: 400;
+    
+}
+
+.slide-motivos {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.slide-motivos .slide-item {
+  margin-top: 30px;
+  width: 100%;
+  display: none;
+  box-sizing: border-box;  
+}
+
+.slide-item h2{
+    font-size: 25px;
+    font-weight: 300;
+}
+
+.slide-item h3{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.slide-item h5{
+    font-size: 14px;
+    font-weight: 300;
+    margin-right: 20px;
+}
+
+.slide-motivos .slide-item.active {
+  display: block;
+}
+
+/* Botões de navegação */
+.slide-motivos .nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.322);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 6px 13px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+  display: none;
+}
+
+.slide-motivos .nav-btn.prev {
+  left: 10px;
+}
+
+.slide-motivos .nav-btn.next {
+  right: 10px;
+}
+
+.slide-motivos .nav-btn:hover{
+      background: rgba(0, 0, 0, 0.753);
+}
+
+.slide-motivos .dots-nav {
+  position: absolute;
+  bottom: 15px;           /* ajuste para ficar um pouco acima do fundo */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.slide-motivos .dots-nav .dot {
+    --dot-width: 18px;
+    --dot-height: 8px;
+    width: var(--dot-width);
+    height: var(--dot-height);
+    border-radius: calc(var(--dot-height) / 2);
+    margin: 0; /* position managed by .dots-nav */
+    background: linear-gradient(180deg, rgba(7,44,255,0.85), rgba(46,128,255,0.75));
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+    outline: none;
+}
+
+.slide-motivos .dots-nav .dot:hover {
+    transform: scale(1.12);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+}
+
+.slide-motivos .dots-nav .dot:focus-visible {
+    box-shadow: 0 0 0 4px rgba(46,128,255,0.18);
+}
+
+.slide-motivos .dots-nav .dot.active {
+    background: linear-gradient(180deg, rgb(116,116,116), rgb(160,160,160));
+    transform: scale(1.18);
+    border-color: rgba(0,0,0,0.2);
+}
+
+.slide-motivos .dots-nav .dot.active {
+  background: rgb(116, 116, 116);
+}
